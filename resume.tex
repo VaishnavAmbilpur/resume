@@ -1,0 +1,137 @@
+\documentclass[a4paper,10pt]{article}
+
+% -------- PAGE LAYOUT --------
+\usepackage[top=0.35in, bottom=0.15in, left=0.7in, right=0.7in]{geometry}
+\setlength{\topskip}{0pt}
+
+% -------- PACKAGES --------
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{graphicx}
+
+% -------- FORMATTING --------
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=15pt, parsep=0pt, partopsep=0pt}
+
+\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{6pt}
+
+\begin{document}
+\vspace*{-\baselineskip}
+
+\begin{center}
+\begin{minipage}{0.96\textwidth}
+
+%==================== HEADER ====================
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}l@{}r@{}}
+\begin{minipage}[c]{0.12\textwidth}
+\hspace{-7pt}
+\includegraphics[width=1.7cm]{profile.png}
+\end{minipage}
+&
+\begin{minipage}[c]{0.55\textwidth}
+{\Large \textbf{Ambilpur Vaishnav}}\\[2pt]
+Roll No: 24112011182\\
+B.Tech $|$ Computer Science Engineering\\
+Maulana Azad National Institute of Technology, Bhopal
+\end{minipage}
+&
+\begin{minipage}[t]{0.33\textwidth}
+\vspace{-17pt}
+\raggedleft
+\small
++91-7396806656\\
+\href{mailto:vaishnavambilpur2006@gmail.com}{vaishnavambilpur2006@gmail.com}\\
+\href{https://github.com/VaishnavAmbilpur}{GitHub Profile}\\
+\href{https://www.linkedin.com/in/vaishnav-ambilpur-005a2a304/}{LinkedIn Profile}
+\end{minipage}
+\end{tabular*}
+
+\vspace{2pt}
+
+%==================== EDUCATION ====================
+\section*{EDUCATION}
+\noindent\textbf{Maulana Azad National Institute of Technology, Bhopal} \hfill 2024 -- 2028 \\
+B.Tech in Computer Science Engineering (Expected May 2028) \hfill CGPA: 8.88
+
+\vspace{1pt}
+\noindent\textbf{TSBIE (Senior Secondary, Class XII)} \hfill 2024 \\
+Telangana State Board of Intermediate Education \hfill 97.1\%
+
+\vspace{1pt}
+\noindent\textbf{TSBSE (Secondary, Class X)} \hfill 2022 \\
+Telangana State Board of Secondary Education \hfill 98\%
+
+%==================== PROJECTS ====================
+\section*{PROJECTS}
+\noindent\textbf{AI-Powered Semantic Reddit Search Engine} \hfill
+\href{https://github.com/VaishnavAmbilpur/semantic-reddit-search}{\textit{Repo link}} $|$
+\href{https://semantic-reddit-search.vercel.app/}{\textit{Live link}}
+
+\noindent\textit{Personal Project}
+\begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+    \item Engineered a semantic search engine over Reddit using AI vector embeddings to retrieve results by contextual meaning rather than keywords; combined a third-party Reddit data API with an ArcticShift archive fallback and a Hugging Face cross-encoder reranker, while integrating Redis caching to deliver near-instant repeat-query responses and a self-growing index that autonomously expands with every search.
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{Real-Time Queue Management SaaS for Businesses} \hfill
+\href{https://github.com/VaishnavAmbilpur/FLOW-Q_Binary_Builders}{\textit{Repo link}} $|$
+\href{https://flow-q-binary-builders.vercel.app/}{\textit{Live link}}
+
+\noindent\textit{Collaborative Project}
+\begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+    \item Architected a multi-tenant queue management platform enabling businesses to onboard customers instantly via a zero-install browser link, eliminating physical waiting lines through live position tracking and real-time estimated wait-time delivery.
+    \item Optimised real-time event propagation over persistent WebSockets for near-instant queue updates; designed a B2B REST API with a self-provisioning sandbox reducing third-party integration to a single API call; recognised as Top 6 out of 60 teams at Hacksogen, IIIT Gwalior IEEE.
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{End-to-End Encrypted Real-Time Chat Application} \hfill
+\href{https://github.com/VaishnavAmbilpur/Chatty}{\textit{Repo link}} $|$
+\href{https://chatty-psi-two.vercel.app/}{\textit{Live link}}
+
+\noindent\textit{Personal Project}
+\begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+    \item Developed a privacy-first real-time chat application with client-side End-to-End Encryption using AES-GCM and PBKDF2 key derivation via the browser's native Web Crypto API, ensuring complete message confidentiality such that even a fully compromised server exposes zero readable content.
+    \item Optimised frontend state management with Zustand to eliminate redundant re-renders, achieving low-latency live features including typing indicators and user presence across all devices.
+\end{itemize}
+
+%==================== TECHNICAL SKILLS ====================
+\section*{SKILLS}
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=0pt]
+  \item \textbf{Languages:} C, C++, JavaScript, TypeScript
+  \item \textbf{Frontend:} HTML5, CSS3, React 18, Next.js, Tailwind CSS, Zustand
+  \item \textbf{Backend:} Node.js, Express, REST APIs, WebSockets, Socket.io, Prisma ORM
+  \item \textbf{Databases \& Cloud:} MongoDB, PostgreSQL, pgvector, MySQL, Redis, Vercel, Render
+  \item \textbf{AI / Search:} Vector Embeddings, Semantic Search, pgvector HNSW, Hugging Face
+  \item \textbf{Tools \& Software:} Git, GitHub, Postman, Upstash
+  \item \textbf{CourseWork:} Data Structures \& Algorithms, Database Management Systems, Object Oriented Programming
+\end{itemize}
+
+%==================== ACHIEVEMENTS ====================
+\section*{ACHIEVEMENTS \& CODING PROFILES}
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=0pt]
+  \item \textbf{LeetCode:} Achieved a Max Rating of \textbf{1707} (Top 12\% globally); solved \textbf{350+} algorithmic problems across data structures and algorithms. \href{https://leetcode.com/u/Dexter_Morgan_11/}{Profile}
+  \item \textbf{GeeksforGeeks:} Solved \textbf{150+} DSA problems. \href{https://www.geeksforgeeks.org/profile/wolfman1a0x}{Profile}
+  \item \textbf{Hacksogen (IIIT Gwalior IEEE):} \textbf{Top Performer} (Top 6 out of 60 teams) for Real-Time Queue Management SaaS in the Web Development Track. \href{https://drive.google.com/file/d/1nmm-nGwa0UR6mkbwFsYoZg68uAosnPP_/view?usp=sharing}{Certificate}
+  \item \textbf{Dev Dual Hackathon (IIT Hyderabad):} Ranked \textbf{Top 11 out of 120+ teams} in a national-level full-stack competition. \href{https://drive.google.com/file/d/1RSsvjbV7ymJkxJprlhHcTRNZsL9EQmlx/view?usp=sharing}{Certificate}
+\end{itemize}
+
+%==================== POSITIONS OF RESPONSIBILITY ====================
+\section*{POSITIONS OF RESPONSIBILITY}
+\noindent\textbf{Member, Zenith (The Programming Club, NIT Bhopal)} \hfill \textbf{May 2026 -- Present}
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+    \item Participated in \textbf{competitive programming contests} and \textbf{hackathons}, solving algorithmic challenges; proficient in \textbf{C++} and \textbf{DSA}.
+\end{itemize}
+
+\vspace{1pt}
+\noindent\textbf{Content Writer, Quizzer Club, NIT Bhopal} \hfill \textbf{Jul 2025 -- Present}
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+    \item Managed content for \textbf{IQC} and \textbf{Anveshan} (\textbf{200+ participants}); handled sponsorship reports and social media outreach.
+\end{itemize}
+
+\end{minipage}
+\end{center}
+\end{document}
