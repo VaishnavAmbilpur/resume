@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 
 % -------- PAGE LAYOUT --------
-\usepackage[top=0.35in, bottom=0.15in, left=0.7in, right=0.7in]{geometry}
+\usepackage[top=0.28in, bottom=0.15in, left=0.7in, right=0.7in]{geometry}
 \setlength{\topskip}{0pt}
 
 % -------- PACKAGES --------
@@ -73,9 +73,9 @@ Telangana State Board of Secondary Education \hfill 98\%
 
 \noindent\textit{Personal Project}
 \begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
-    \item Engineered a semantic search engine over Reddit using AI vector embeddings to retrieve results by contextual meaning rather than keywords; combined a third-party Reddit data API with an ArcticShift archive fallback and a Hugging Face cross-encoder reranker, while integrating Redis caching to deliver near-instant repeat-query responses and a self-growing index that autonomously expands with every search.
+  \item Engineered a semantic search engine over Reddit using AI vector embeddings to retrieve results by contextual meaning rather than keywords, combining a third-party Reddit data API with an ArcticShift archive fallback for broad recall.
+  \item Implemented \texttt{pgvector} HNSW cosine similarity search over a self-growing Postgres index with Upstash Redis caching, delivering near-instant repeat-query responses and an index that autonomously expands with every search.
 \end{itemize}
-
 \vspace{2pt}
 \noindent\textbf{Real-Time Queue Management SaaS for Businesses} \hfill
 \href{https://github.com/VaishnavAmbilpur/FLOW-Q_Binary_Builders}{\textit{Repo link}} $|$
