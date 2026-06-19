@@ -1,46 +1,48 @@
 \documentclass[a4paper,10pt]{article}
 
 % -------- PAGE LAYOUT --------
-\usepackage[top=0.43in, bottom=0.15in, left=0.7in, right=0.7in]{geometry}
+\usepackage[top=0.45in, bottom=0.4in, left=0.5in, right=0.5in]{geometry}
 \setlength{\topskip}{0pt}
 
 % -------- PACKAGES --------
-\usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{graphicx}
 
-% -------- FORMATTING --------
+% -------- FORMATTING & BOUNDARY CODES --------
 \setlength{\parindent}{0pt}
 \setlist[itemize]{noitemsep, topsep=0pt, leftmargin=15pt, parsep=0pt, partopsep=0pt}
 
-\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{5pt}{6pt}
+% FIXED: Guarantees the underline sits flawlessly below the text baseline without cutting through it
+\newcommand{\ressection}[1]{%
+  \vspace{8pt}%
+  {\large\bfseries #1}\par%
+  \kern 3pt% Creates a perfect, crisp gap right underneath the letters
+  \hrule height 0.4pt% Renders a clean baseline underline
+  \vspace{4pt}% Tight spacing to the content below
+}
 
 \begin{document}
 \vspace*{-\baselineskip}
 
-\begin{center}
-\begin{minipage}{0.96\textwidth}
-
-%==================== HEADER ====================
+%==================== HEADER WITH LOGO ====================
 \noindent
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}l@{}r@{}}
-\begin{minipage}[c]{0.12\textwidth}
-\hspace{-7pt}
-\includegraphics[width=1.7cm]{profile.png}
+\begin{minipage}[b]{0.12\textwidth}
+\hspace{-3pt}
+\raisebox{-1pt}{\includegraphics[width=2cm]{profile.png}} % Perfectly shifts baseline to align with text strings
 \end{minipage}
 &
-\begin{minipage}[c]{0.55\textwidth}
-{\Large \textbf{Ambilpur Vaishnav}}\\[2pt]
+\begin{minipage}[b]{0.52\textwidth}
+{\Large \textbf{Ambilpur Vaishnav}}\\[4pt]
+\small
 Roll No: 24112011182\\
 B.Tech $|$ Computer Science Engineering\\
 Maulana Azad National Institute of Technology, Bhopal
 \end{minipage}
 &
-\begin{minipage}[t]{0.33\textwidth}
-\vspace{-17pt}
+\begin{minipage}[b]{0.34\textwidth}
 \raggedleft
 \small
 +91-7396806656\\
@@ -49,54 +51,57 @@ Maulana Azad National Institute of Technology, Bhopal
 \href{https://www.linkedin.com/in/vaishnav-ambilpur-005a2a304/}{LinkedIn Profile}
 \end{minipage}
 \end{tabular*}
-
-\vspace{2pt}
+\vspace{1pt}
 
 %==================== EDUCATION ====================
-\section*{EDUCATION}
+\ressection{EDUCATION}
 \noindent\textbf{Maulana Azad National Institute of Technology, Bhopal} \hfill 2024 -- 2028 \\
 B.Tech in Computer Science Engineering (Expected May 2028) \hfill CGPA: 8.82
 
-\vspace{1pt}
+\vspace{3pt}
 \noindent\textbf{TSBIE (Senior Secondary, Class XII)} \hfill 2024 \\
 Telangana State Board of Intermediate Education \hfill 97.1\%
 
-\vspace{1pt}
+\vspace{3pt}
 \noindent\textbf{TSBSE (Secondary, Class X)} \hfill 2022 \\
 Telangana State Board of Secondary Education \hfill 98\%
 
 %==================== PROJECTS ====================
-\section*{PROJECTS}
+\ressection{PROJECTS}
 \noindent\textbf{AI-Powered Semantic Reddit Search Engine} \hfill
 \href{https://github.com/VaishnavAmbilpur/semantic-reddit-search}{\textit{Repo link}} $|$
 \href{https://semantic-reddit-search.vercel.app/}{\textit{Live link}} \\
 \noindent\textit{Personal Project}
-\begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=2pt]
+\begin{itemize}[label={--}, leftmargin=15pt, itemsep=2pt, topsep=2pt]
 \item Built a semantic search engine using \textbf{Hugging Face embeddings} and \textbf{Pinecone vector search} to retrieve Reddit discussions based on contextual meaning instead of keyword matching.
 \item Designed a self-growing retrieval pipeline with \textbf{Redis caching} and \textbf{QStash background workers} that automatically indexes newly discovered Reddit content, enabling sub-10ms repeat searches.
 \end{itemize}
-\vspace{4pt}
+
+\vspace{5pt}
+
 \noindent\textbf{Real-Time Queue Management SaaS for Businesses} \hfill
 \href{https://github.com/VaishnavAmbilpur/FLOW-Q_Binary_Builders}{\textit{Repo link}} $|$
 \href{https://flow-q-binary-builders.vercel.app/}{\textit{Live link}} \\
 \noindent\textit{Collaborative Project}
-\begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=2pt]
+\begin{itemize}[label={--}, leftmargin=15pt, itemsep=2pt, topsep=2pt]
 \item Architected a multi-tenant queue management platform enabling businesses to onboard customers instantly via a zero-install browser link, eliminating physical waiting lines through \textbf{live position tracking} and real-time estimated wait-time delivery.
 \item Optimised real-time event propagation over \textbf{persistent WebSockets} for near-instant queue updates; designed a B2B REST API with a self-provisioning sandbox reducing third-party integration to a single API call; secured \textbf{Rank 6/60 at Hacksogen (IIIT Gwalior)}.
 \end{itemize}
-\vspace{4pt}
+
+\vspace{5pt}
 
 \noindent\textbf{End-to-End Encrypted Real-Time Chat Application} \hfill
 \href{https://github.com/VaishnavAmbilpur/Chatty}{\textit{Repo link}} $|$
 \href{https://chatty-psi-two.vercel.app/}{\textit{Live link}} \\
 \noindent\textit{Personal Project}
-\begin{itemize}[label={--}, leftmargin=15pt, itemsep=0pt, topsep=2pt]
+\begin{itemize}[label={--}, leftmargin=15pt, itemsep=2pt, topsep=2pt]
 \item Developed a privacy-first real-time chat application with client-side \textbf{End-to-End Encryption} using \textbf{AES-GCM} and PBKDF2 key derivation via the browser's native Web Crypto API, ensuring complete message confidentiality such that even a fully compromised server exposes zero readable content.
 \item Optimised frontend state management with \textbf{Zustand} to eliminate redundant re-renders, achieving low-latency live features including typing indicators and user presence across all devices.
 \end{itemize}
+
 %==================== TECHNICAL SKILLS ====================
-\section*{SKILLS}
-\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=0pt]
+\ressection{TECHNICAL SKILLS}
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=2pt, topsep=2pt]
   \item \textbf{Languages:} C, C++, JavaScript, TypeScript
   \item \textbf{Frontend:} React, Next.js, HTML5, CSS3, Tailwind CSS, Zustand
   \item \textbf{Backend:} Node.js, Express.js, REST APIs, WebSockets, Socket.io
@@ -108,26 +113,25 @@ Telangana State Board of Secondary Education \hfill 98\%
 \end{itemize}
 
 %==================== ACHIEVEMENTS ====================
-\section*{ACHIEVEMENTS \& CODING PROFILES}
-\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=2pt, topsep=0pt]
+\ressection{ACHIEVEMENTS \& CODING PROFILES}
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=2pt, topsep=2pt]
   \item \textbf{LeetCode:} Max Rating 1730 (Top 11\% globally) | 500+ DSA problems solved. \href{https://leetcode.com/u/Dexter_Morgan_11/}{Handle}
   \item \textbf{GeeksforGeeks:} 150+ DSA problems solved. \href{https://www.geeksforgeeks.org/profile/wolfman1a0x}{Handle}
   \item \textbf{Hacksogen (IIIT Gwalior):} Rank 6/60 | Real-time Queue SaaS. \href{https://drive.google.com/file/d/1nmm-nGwa0UR6mkbwFsYoZg68uAosnPP_/view?usp=sharing}{Certificate}
   \item \textbf{Dev Dual Hackathon (IIT Hyderabad):} Rank 11/120+ | National full-stack event. \href{https://drive.google.com/file/d/1RSsvjbV7ymJkxJprlhHcTRNZsL9EQmlx/view?usp=sharing}{Certificate}
 \end{itemize}
+
 %==================== POSITIONS OF RESPONSIBILITY ====================
-\section*{POSITIONS OF RESPONSIBILITY}
+\ressection{POSITIONS OF RESPONSIBILITY}
 \noindent\textbf{Member, Zenith (The Programming Club, NIT Bhopal)} \hfill \textbf{May 2026 -- Present}
-\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=1pt]
     \item Participated in \textbf{competitive programming contests} and \textbf{hackathons}, solving algorithmic challenges; proficient in \textbf{C++} and \textbf{DSA}.
 \end{itemize}
 
-\vspace{1pt}
+\vspace{3pt}
 \noindent\textbf{Content Writer, Quizzer Club, NIT Bhopal} \hfill \textbf{Jul 2025 -- Present}
-\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=0pt, topsep=1pt]
+\begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=1pt]
     \item Managed content for \textbf{IQC} and \textbf{Anveshan} (\textbf{200+ participants}); handled sponsorship reports and social media outreach.
 \end{itemize}
 
-\end{minipage}
-\end{center}
 \end{document}
