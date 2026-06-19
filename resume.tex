@@ -14,12 +14,12 @@
 \setlength{\parindent}{0pt}
 \setlist[itemize]{noitemsep, topsep=0pt, leftmargin=15pt, parsep=0pt, partopsep=0pt}
 
-% FIXED: Guarantees the underline sits flawlessly below the text baseline without cutting through it
+% FIXED: Added wider space (\kern 5pt) between Header text and Underline
 \newcommand{\ressection}[1]{%
-  \vspace{8pt}%
+  \vspace{8pt}% Space above the section title
   {\large\bfseries #1}\par%
-  \kern 3pt% Creates a perfect, crisp gap right underneath the letters
-  \hrule height 0.4pt% Renders a clean baseline underline
+  \kern 5pt% Pushes the underline down to create a clear gap below the text strings
+  \hrule height 0.4pt% Clean professional baseline rule
   \vspace{4pt}% Tight spacing to the content below
 }
 
@@ -31,7 +31,7 @@
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}l@{}r@{}}
 \begin{minipage}[b]{0.12\textwidth}
 \hspace{-3pt}
-\raisebox{-1pt}{\includegraphics[width=2cm]{profile.png}} % Perfectly shifts baseline to align with text strings
+\raisebox{-1pt}{\includegraphics[width=1.8cm]{profile.png}}
 \end{minipage}
 &
 \begin{minipage}[b]{0.52\textwidth}
@@ -51,10 +51,11 @@ Maulana Azad National Institute of Technology, Bhopal
 \href{https://www.linkedin.com/in/vaishnav-ambilpur-005a2a304/}{LinkedIn Profile}
 \end{minipage}
 \end{tabular*}
-\vspace{1pt}
+\vspace{-3pt}
 
 %==================== EDUCATION ====================
 \ressection{EDUCATION}
+\vspace{2pt}
 \noindent\textbf{Maulana Azad National Institute of Technology, Bhopal} \hfill 2024 -- 2028 \\
 B.Tech in Computer Science Engineering (Expected May 2028) \hfill CGPA: 8.82
 
@@ -68,6 +69,7 @@ Telangana State Board of Secondary Education \hfill 98\%
 
 %==================== PROJECTS ====================
 \ressection{PROJECTS}
+\vspace{2pt}
 \noindent\textbf{AI-Powered Semantic Reddit Search Engine} \hfill
 \href{https://github.com/VaishnavAmbilpur/semantic-reddit-search}{\textit{Repo link}} $|$
 \href{https://semantic-reddit-search.vercel.app/}{\textit{Live link}} \\
@@ -123,6 +125,7 @@ Telangana State Board of Secondary Education \hfill 98\%
 
 %==================== POSITIONS OF RESPONSIBILITY ====================
 \ressection{POSITIONS OF RESPONSIBILITY}
+\vspace{2pt}
 \noindent\textbf{Member, Zenith (The Programming Club, NIT Bhopal)} \hfill \textbf{May 2026 -- Present}
 \begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=1pt]
     \item Participated in \textbf{competitive programming contests} and \textbf{hackathons}, solving algorithmic challenges; proficient in \textbf{C++} and \textbf{DSA}.
