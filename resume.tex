@@ -1,19 +1,15 @@
 \documentclass[a4paper,10pt]{article}
-
 % -------- PAGE LAYOUT --------
 \usepackage[top=0.45in, bottom=0.4in, left=0.5in, right=0.5in]{geometry}
 \setlength{\topskip}{0pt}
-
 % -------- PACKAGES --------
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{graphicx}
-
 % -------- FORMATTING & BOUNDARY CODES --------
 \setlength{\parindent}{0pt}
 \setlist[itemize]{noitemsep, topsep=0pt, leftmargin=15pt, parsep=0pt, partopsep=0pt}
-
 % FIXED: Added wider space (\kern 5pt) between Header text and Underline
 \newcommand{\ressection}[1]{%
   \vspace{8pt}% Space above the section title
@@ -22,30 +18,17 @@
   \hrule height 0.4pt% Clean professional baseline rule
   \vspace{4pt}% Tight spacing to the content below
 }
-
 \begin{document}
 \vspace*{-\baselineskip}
-
 %==================== HEADER WITH LOGO ====================
 \noindent
-\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
-\begin{minipage}[b]{0.62\textwidth}
-{\Large \textbf{Ambilpur Vaishnav}}\\[4pt]
-\small
-Roll No: 24112011182\\
-B.Tech $|$ Computer Science Engineering\\
-Maulana Azad National Institute of Technology, Bhopal
-\end{minipage}
-&
-\begin{minipage}[b]{0.38\textwidth}
-\raggedleft
-\small
-+91-7396806656\\
-\href{mailto:vaishnavambilpur2006@gmail.com}{vaishnavambilpur2006@gmail.com}\\
-\href{https://github.com/VaishnavAmbilpur}{GitHub Profile}\\
-\href{https://www.linkedin.com/in/vaishnav-ambilpur-005a2a304/}{LinkedIn Profile}
-\end{minipage}
-\end{tabular*}
+{\Large \textbf{Ambilpur Vaishnav}} \hfill +91-7396806656 \\[0.5pt]
+\noindent
+Roll No: 24112011182 \hfill \href{mailto:vaishnavambilpur2006@gmail.com}{vaishnavambilpur2006@gmail.com} \\[0.5pt]
+\noindent
+B.Tech $|$ Computer Science Engineering \hfill \href{https://github.com/VaishnavAmbilpur}{GitHub Profile} \\[0.5pt]
+\noindent
+Maulana Azad National Institute of Technology, Bhopal \hfill \href{https://www.linkedin.com/in/vaishnav-ambilpur-005a2a304/}{LinkedIn Profile}
 \vspace{-3pt}
 
 %==================== EDUCATION ====================
@@ -53,15 +36,14 @@ Maulana Azad National Institute of Technology, Bhopal
 \vspace{2pt}
 \noindent\textbf{Maulana Azad National Institute of Technology, Bhopal} \hfill 2024 -- 2028 \\
 B.Tech in Computer Science Engineering (Expected May 2028) \hfill CGPA: 8.82
-
 \vspace{3pt}
+
 \noindent\textbf{TSBIE (Senior Secondary, Class XII)} \hfill 2024 \\
 Telangana State Board of Intermediate Education \hfill Score: 971/1000
-
 \vspace{3pt}
+
 \noindent\textbf{TSBSE (Secondary, Class X)} \hfill 2022 \\
 Telangana State Board of Secondary Education \hfill Grade: 10/10
-
 
 %==================== TECHNICAL SKILLS ====================
 \ressection{TECHNICAL SKILLS}
@@ -79,7 +61,6 @@ Telangana State Board of Secondary Education \hfill Grade: 10/10
 %==================== PROJECTS ====================
 \ressection{PROJECTS}
 \vspace{2pt}
-
 \noindent\textbf{Real-Time Queue Management SaaS for Businesses} \hfill
 \href{https://github.com/VaishnavAmbilpur/FLOW-Q_Binary_Builders}{\textit{Repo link}} $|$
 \href{https://flow-q-binary-builders.vercel.app/}{\textit{Live link}} \\[2pt]
@@ -88,9 +69,7 @@ Telangana State Board of Secondary Education \hfill Grade: 10/10
 \item Architected a multi-tenant queue management platform enabling businesses to onboard customers instantly via a zero-install browser link, eliminating physical waiting lines through \textbf{live position tracking}.
 \item Optimised real-time event propagation over \textbf{persistent WebSockets} for near-instant queue updates; designed a B2B REST API integrated with \textbf{automated webhooks} to push real-time status updates to third-party clients; secured \textbf{Rank 2/60 at Hacksogen (IIIT Gwalior)}.
 \end{itemize}
-
 \vspace{5pt}
-
 \noindent\textbf{AI-Powered Semantic Reddit Search Engine} \hfill
 \href{https://github.com/VaishnavAmbilpur/semantic-reddit-search}{\textit{Repo link}} $|$
 \href{https://semantic-reddit-search.vercel.app/}{\textit{Live link}} \\[2pt]
@@ -99,9 +78,7 @@ Telangana State Board of Secondary Education \hfill Grade: 10/10
 \item Built a semantic search engine using \textbf{Hugging Face embeddings} and \textbf{Pinecone vector search} to retrieve Reddit discussions based on contextual meaning instead of keyword matching.
 \item Designed a self-growing retrieval pipeline with \textbf{Redis caching} and \textbf{QStash background workers} that automatically indexes newly discovered Reddit content, enabling sub-1s repeat searches.
 \end{itemize}
-
 \vspace{5pt}
-
 \noindent\textbf{Real-Time Chat Application} \hfill
 \href{https://github.com/VaishnavAmbilpur/Chatty}{\textit{Repo link}} $|$
 \href{https://chatty-psi-two.vercel.app/}{\textit{Live link}} \\[2pt]
@@ -114,6 +91,7 @@ Telangana State Board of Secondary Education \hfill Grade: 10/10
 %==================== ACHIEVEMENTS ====================
 \ressection{ACHIEVEMENTS \& CODING PROFILES}
 \begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=2pt, topsep=2pt]
+  \item \textbf{Codolio:} Centralized coding portfolio | 650+ DSA problems solved across platforms. \href{https://codolio.com/profile/vaishnav}{Handle}
   \item \textbf{LeetCode:} Max Rating 1730 (Top 11\% globally) | 500+ DSA problems solved. \href{https://leetcode.com/u/Dexter_Morgan_11/}{Handle}
   \item \textbf{Codeforces:} Max Rating 1124 | \href{https://codeforces.com/profile/DexterMorgan11}{Handle}
   \item \textbf{GeeksforGeeks:} 150+ DSA problems solved. \href{https://www.geeksforgeeks.org/profile/wolfman1a0x}{Handle}
@@ -128,11 +106,10 @@ Telangana State Board of Secondary Education \hfill Grade: 10/10
 \begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=1pt]
     \item Participated in competitive programming contests using \textbf{C++} and \textbf{DSA} to solve algorithmic challenges.
 \end{itemize}
-
 \vspace{3pt}
+
 \noindent\textbf{Head Content Writer, Quizzer Club, NIT Bhopal} \hfill \textbf{Jul 2025 -- Present}
 \begin{itemize}[label={\textbullet}, leftmargin=15pt, itemsep=1pt, topsep=1pt]
     \item Led the content team for \textbf{IQC} and \textbf{Anveshan} (\textbf{200+ attendees}) while managing sponsorship documentation.
 \end{itemize}
-
 \end{document}
